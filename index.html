@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laboration 4 - Autentisering</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <h1>Laboration 4</h1>
+
+      <div id="message-box" class="hidden"></div>
+
+      <section id="register-section">
+        <h2>Registrera dig</h2>
+        <form id="register-form">
+          <div class="input-group">
+            <label for="reg-username">Användarnamn:</label>
+            <input type="text" id="reg-username" required autocomplete="username">
+          </div>
+          <div class="input-group">
+            <label for="reg-password">Lösenord:</label>
+            <input type="password" id="reg-password" required autocomplete="new-password">
+          </div>
+          <button type="submit">Skapa konto</button>
+        </form>
+        <p>Har du redan ett konto? <button id="to-login-btn" class="link-btn">Logga in här</button></p>
+      </section>
+
+      <section id="login-section" class="hidden">
+        <h2>Logga in</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <label for="login-username">Användarnamn:</label>
+            <input type="text" id="login-username" required autocomplete="username">
+          </div>
+          <div class="input-group">
+            <label for="login-password">Lösenord:</label>
+            <input type="password" id="login-password" required autocomplete="current-password">
+          </div>
+          <button type="submit">Logga in</button>
+        </form>
+        <p>Har du inget konto? <button id="to-register-btn" class="link-btn">Registrera dig här</button></p>
+      </section>
+
+      <section id="protected-section" class="hidden">
+        <h2>Välkommen till VIP-rummet!</h2>
+        <p id="welcome-message"></p>
+
+        <div class="secret-data-box">
+          <h3>Hemlig data från API:et</h3>
+          <p id="secret-content">Laddar hemlig data...</p>
+        </div>
+
+        <button id="logout-btn">Logga ut</button>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
