@@ -58,8 +58,8 @@ function checkLoginStatus() {
 registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const username = document.getElementById("reg-username").ariaValueMax;
-    const password = document.getElementById("reg-password").ariaValueMax;
+    const username = document.getElementById("reg-username").value;
+    const password = document.getElementById("reg-password").value;
 
     try {
         const response = await fetch(`${API_URL}/register`, {
@@ -137,7 +137,7 @@ async function fetchProtectedData(token) {
         secretContent.innerHTML = `
         <p><strong>Status:</strong> ${data.message}</p>
         <p><strong>Inloggad profil: </strong> ${data.user}</p>
-        <p style="color: green; margin-top: 10px;>✓ Din JWT-token är aktiv och krypterad!</p>`
+        <p style="color: green; margin-top: 10px";>✓ Din JWT-token är aktiv och krypterad!</p>`
     } catch (error) {
         secretContent.textContent = `Fel: ${error.message}`;
         if (response.status === 403 || response.status === 401) {
