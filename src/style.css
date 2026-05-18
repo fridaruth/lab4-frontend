@@ -1,0 +1,197 @@
+:root {
+    /* färgpalett */
+    --color-background: #fcf8f3;
+    --color-primary: #f1924e;
+    --color-secondary: #f7b589;
+    --color-text-dark: #2c2c2c;
+    --color-text-light: #fcf8f3;
+
+    /* typografi */
+    --font-serif: 'Playfair Display', Georgia, Times, serif;
+    --font-sans: 'Montserrat', Arial, sans-serif;
+}
+
+/* global återställning */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* layout för appen */
+#app {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* typografi styling */
+h1 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--color-text-dark);
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* formulär styling */
+.input-group {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    border: 1px solid #decbb7;
+    border-radius: 2px;
+    color: var(--color-text-dark);
+    background-color: #fffdfb;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(255,106,0,0.1);
+}
+
+/* knapp-styling */
+button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    border: none;
+    padding: 18px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* länk-knappar */
+.link-btn, #logout-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font-weight: bold;
+}
+
+.link-btn:hover, #logout-btn:hover {
+    color: var(--color-secondary);
+}
+
+#logout-btn {
+    display: block;
+    margin-top: 40px;
+    color: #999;
+}
+
+#logout-btn:hover { 
+    color: #333 
+}
+
+/* klass för att dölja element */
+.hidden {
+    display: none !important;
+}
+
+/* feedback-meddelanden */
+#message-box {
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+#message-box.success {
+    background-color: #f6fff6;
+    color: #1a5c1a;
+    border-color: #c9e4c9;
+}
+
+#message-box.error {
+    background-color: #fff6f6;
+    color: #711f1f;
+    border-color: #e4c9c9;
+}
+
+/* skyddat område */
+.secret-data-box {
+    background-color: #f9f9f9;
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 25px;
+    border-radius: 4px;
+    margin: 25px 0;
+}
+
+#secret-content {
+    color: var(--color-text-dark);
+    background: #e8e8e8;
+    padding: 15px;
+    border-radius: 2px;
+    word-break: break-all;
+}
