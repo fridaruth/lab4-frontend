@@ -2,6 +2,8 @@
 
 Detta är frontend-delen av Laboration 4, en Single Page Application byggd med Vanilla JavaScript och Vite som kommunicerar med ett Express-API.
 
+## 🔗 [Länk till sidan](https://lab4-autentisering.netlify.app/)
+
 ## Funktioner
 * **Vyer:** Sömlös växling mellan registrering och inloggning, utan att ladda om sidan.
 * **Sessionshantering:** Sparar JWT-token och användarnamn i `localStorage` vid lyckad inloggning.
